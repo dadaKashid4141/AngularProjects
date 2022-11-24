@@ -1,0 +1,14 @@
+<div class="dngr">
+    <h1>This is Warning, U R in danger!</h1>
+</div>
+
+<div>{{name}}</div>   <!--string Interpolation-->
+
+<button [disabled]="allowNewServer">allowNewServer</button>  <!--property binding-->
+
+<button (click)="onclick()">dada</button>    <!--event binding-->
+{{myname}}
+
+<input type="text" [(ngModel)]="urname" >   <!--two way binding-->
+{{urname}}
+<app-second></app-second>
