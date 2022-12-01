@@ -1,0 +1,23 @@
+<div [ngStyle]="{'color':colorval}">
+hhiiiiis
+</div>
+
+<h4>Ng Class</h4>
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
+    }">
+ 
+     {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
+
+<p>Normal para</p>
+<p appCustdir>Custom para</p>
+<input type="text" #name="", id="" >
+<button (click)="show(name.value)">show</button>
+<h1>{{uname}}</h1>;

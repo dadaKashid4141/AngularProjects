@@ -1,0 +1,27 @@
+<pre *ngIf="isshow">demodirective works! 
+     use of structural derective:ngIf
+</pre>  <!--ngif directive is used-->
+
+<div>
+     <div>{{title}}</div>
+</div>
+<div>
+     <table class="table">
+          <thead>
+               <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Cast</th>
+                    <th>ReleaseDate</th>
+               </tr>
+          </thead>
+          <tbody>
+               <tr *ngFor="let movie of movies">  <!--ngFor used for iterate array-->
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.director}}</td>
+                    <td>{{movie.cast}}</td>
+                    <td>{{movie.releaseDate}}</td>
+               </tr>
+          </tbody>
+     </table>
+</div>

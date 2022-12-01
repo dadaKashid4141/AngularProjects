@@ -1,0 +1,56 @@
+<!--ngIf-->
+<div>
+    click me: <input type="checkbox" (click)="baseValue()">
+    <div >
+    <h2 *ngIf="isShow">Hiii ,U can see me coz checkbox is at checked condition</h2>
+    </div>
+</div>
+<div *ngIf="!demo">demomdeomo
+
+</div>
+
+<!-- ngFor -->
+<div>
+    <table class="table table-bordered table-hover table-striped-columns">
+        <thead  class="">
+            <tr>
+                <th>Course Name</th>
+                <th>Duration</th>
+                <th>Fees</th>
+            </tr>
+         </thead>
+
+         
+         <tbody>
+                <tr *ngFor="let iterate of allcourses">
+                    <td>{{iterate.courseName}}</td>
+                    <td>{{iterate.durationss}}</td>
+                    <td>{{iterate.fees}}</td>
+
+                </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<!--ngSwitch-->
+
+<div>
+    <div class="col-md-4">
+        <select class="form-control" (change)="getValue($event)">
+            <option value="Default">Please Select Course
+            </option>
+            <option value="SEO">SEO</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Big Data">Big Data</option>
+        </select>
+    </div>
+    <div class="col-md-4" [ngSwitch]="newValue">
+        <h2 class="text-success" *ngSwitchDefault>Please Select Course</h2>
+        <h2 class="text-success" *ngSwitchCase="'SEO'">SEO</h2>
+        <h2 class="text-success" *ngSwitchCase="'Machine Learning'">Machine Learning</h2>
+        <h2 class="text-success" *ngSwitchCase="'Cloud Computing'">Cloud Computing</h2>
+        <h2 class="text-success" *ngSwitchCase="'Big Data'">Big Data</h2>
+    </div>
+</div>

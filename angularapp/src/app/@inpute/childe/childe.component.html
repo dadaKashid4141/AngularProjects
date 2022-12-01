@@ -1,0 +1,37 @@
+<div id='title' class="card" style="width: 18rem  text-white bg-dark" *ngFor="let iterate of item">
+    <div id="t1" class="text-warning card-body ">
+        property comming from parent object:<br>
+    </div>
+    <div id="t1">
+        Movie Name: {{iterate.movieName}},
+        <br>
+        casting:{{iterate.cast}}
+        <br>
+        Budget:{{iterate.Budget}}
+    </div>
+</div>
+<br>
+<br>
+<h2 id="h2"> Array Of Object</h2>
+<div>
+    <table class="table table-bordered table-hover ">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Duration</th>
+                <th>Fees</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr *ngFor="let iterate of all">
+                <td>{{iterate.courseName}}</td>
+                <td>{{iterate.durationss}}</td>
+                <td>{{iterate.fees}}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>

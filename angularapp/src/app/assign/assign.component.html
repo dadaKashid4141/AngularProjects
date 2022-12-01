@@ -1,12 +1,16 @@
-<ol>
-<li>
-   <input  type="text" [(ngModel)]="username">
-</li>
-<li>{{username}}</li>
+
+<div>
+   <input id="frist"  type="text" [(ngModel)]="username">
+ 
+
+{{username}}
 
 
-<li>
-    <button [disabled]="check()" (click)="cleardata()">Reset</button>
-</li>
+<div>
+<button class="btn btn-primary" [disabled]="check()" (click)="cleardata()">Reset</button>
 
-</ol>
+<app-demodirective></app-demodirective>
+<button type="button" class="btn btn-primary">Primary</button>  <!--use of bootstrap class -->
+</div>
+</div>
+<app-demodirective></app-demodirective>

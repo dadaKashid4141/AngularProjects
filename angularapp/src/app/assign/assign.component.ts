@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './assign.component.html',
   styleUrls: ['./assign.component.css']
 })
-export class AssignComponent implements OnInit {
+export class AssignComponent {
   
 username=" ";
 
@@ -13,20 +13,16 @@ cleardata(){
   this.username=" ";
 }
   
-// check(){
-//   if (this.username==" ") {
-//     return true;
-//   }else{
-//     return false;
-//   }
-// }
 check(){
-  this.username==" "? true:false;
+  if (this.username==" ") {
+    return true;
+  }else{
+    return false;
+  }
 }
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
+
 
 }

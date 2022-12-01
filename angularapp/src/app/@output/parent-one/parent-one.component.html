@@ -1,0 +1,36 @@
+<!-- <div class="container" >
+
+    <h2>This is parent components data comming from child</h2>
+<ul *ngFor="let a of arrayFood">
+    <li>{{a}}</li>
+</ul>
+</div>
+<app-child-one (myFood)="demo($event)"></app-child-one> -->
+
+
+<div class="container"  style="height: 50px">
+    <h2 class="text-center">Parent Component</h2>
+</div>
+<div class="container" style="height: 200px;">
+    <ul *ngFor="let a of newmobile">
+        <h4> Mobile Name:{{a.name}}  <br> </h4>
+        <h4> Mobile price: {{a.price}} <br> </h4>
+    </ul>
+    
+</div>
+<div  class="container" style="height: 50px;">
+  For clear click here =>  <button  (click)="clear()"  class="btn btn-info">Clear </button>
+    
+</div>
+    
+
+<app-child-one (getmobiles)="mobiledetais($event)"></app-child-one>
+
+<div class="comtainer"><select (change)="uid = sid.value" #sid>
+    <option selected disabled>No value selected</option>
+    <option [value]="id" *ngFor="let id of [1,2,3,4]">
+      {{id}}
+    </option>
+    </select>
+    
+    <app-hooks [userid]="uid"></app-hooks></div>
