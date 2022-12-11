@@ -9,7 +9,7 @@ export class HooksComponent implements OnInit, OnChanges {
   @Input() userid: number;
 pi;
   constructor() {
-    this.pi = 3.14;
+    // this.pi = 3.14;
     console.log("HooksComponent constructor called");
    }
 

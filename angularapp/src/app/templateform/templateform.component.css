@@ -1,0 +1,11 @@
+#bg{
+    background-image:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdwZX0FLmoFgQ0NNUHpnZrfxdi4VzFna2UycDkil8D&s";
+}
+input.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13px rgb(218, 58, 85) ;
+}
+select.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13px rgb(218, 58, 85) ;
+}

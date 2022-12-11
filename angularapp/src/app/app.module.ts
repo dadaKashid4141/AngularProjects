@@ -14,17 +14,21 @@ import { ParentComponent } from './@inpute/parent/parent.component';
 import { ChildeComponent } from './@inpute/childe/childe.component';
 import { ParentOneComponent } from './@output/parent-one/parent-one.component';
 import { ChildOneComponent } from './@output/child-one/child-one.component';
-import { HooksComponent } from './hooks/hooks.component';
+import { AssigndirectiveComponent } from './assigndirective/assigndirective.component';
+import { ParenthookComponent } from './hook/parenthook/parenthook.component';
+import { HooksComponent } from './hook/hooks/hooks.component';
+import { AddremovebuttonComponent } from './addremovebutton/addremovebutton.component';
+import { TemplateformComponent } from './templateform/templateform.component';
 
 
 @NgModule({
   declarations: [   //U can add all component here
-    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent
+    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, 
   ],
   imports: [            //All moduls 
     BrowserModule,FormsModule
   ],
   providers: [],
-  bootstrap: [ParentOneComponent]    //default starting components
+  bootstrap: [ TemplateformComponent]    //default starting components
 })
 export class AppModule { }

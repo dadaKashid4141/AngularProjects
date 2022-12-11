@@ -1,0 +1,18 @@
+
+<button (click)="onclick()">Add</button>
+<table *ngFor="let a of arrayOfMob">
+    <thead>
+        <tr>
+            <th>{{a.compony}} </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td>{{a.price}}</td>
+          
+        </tr>
+        <tr>
+            <td>{{a.camera}}</td>
+        </tr>
+    </tbody>
+</table>
