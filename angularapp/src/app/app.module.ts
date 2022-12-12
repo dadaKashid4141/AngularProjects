@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { OneComponent } from './one/one.component';
 import { SecondComponent } from './second/second.component';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AssignComponent } from './assign/assign.component';
 import { DemodirectiveComponent } from './demodirective/demodirective.component';
 import { AssignStructDirectiveComponent } from './assign-struct-directive/assign-struct-directive.component';
@@ -19,16 +19,19 @@ import { ParenthookComponent } from './hook/parenthook/parenthook.component';
 import { HooksComponent } from './hook/hooks/hooks.component';
 import { AddremovebuttonComponent } from './addremovebutton/addremovebutton.component';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { SimpleformComponent } from './simpleform.component';
+import { ReFormComponent } from './re-form.component';
+import { TempletdrivenassiComponent } from './templetdrivenassi/templetdrivenassi.component';
 
 
 @NgModule({
   declarations: [   //U can add all component here
-    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, 
+    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent
   ],
   imports: [            //All moduls 
-    BrowserModule,FormsModule
+    BrowserModule,ReactiveFormsModule,FormsModule
   ],
   providers: [],
-  bootstrap: [ TemplateformComponent]    //default starting components
+  bootstrap: [TempletdrivenassiComponent]    //default starting components
 })
 export class AppModule { }

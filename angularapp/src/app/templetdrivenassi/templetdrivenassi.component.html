@@ -1,0 +1,64 @@
+<div class="bg-image img-responsive img-fluid"
+    style="background-image: url('https://images.unsplash.com/photo-1568792923760-d70635a89fdc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&w=1000&q=80'); height: 100vh ;width: 100vw; background-repeat: no-repeat; background-size:cover">
+    <div class="container  mr-md-3">
+        <div class="row jestify-content-center ">
+            <div class="col-sm-6">
+
+                <form ngSubmit="OnSubmit(myform)" #myform="ngForm">
+
+                    <div class="form-group">
+                        <label for="username">Username::</label>
+                        <input type="text" ngModel placeholder="Enter username"  required name="username"
+                            class="form-control" #username="ngModel">
+                        <small *ngIf="username.invalid&&username.touched" style="color: red;">* Enter valid username</small>
+                    </div>
+                    <br><br>
+
+                    <div class="form-group">
+                        <label for="email">Email ID:</label>
+                        <input type="email" ngModel placeholder="Enter Email" email required name="email"
+                            class="form-control" #email="ngModel">
+                        <small *ngIf="email.invalid&&email.touched" style="color: red;">* Enter valid Email</small>
+                    </div>
+                    <br><br>
+
+                    <div class="form-group">
+                        <label for="Select Subscription">Subscription: </label>
+                        <select  class="form-control" name="Subscription" id="Subscription">
+                            <option value="Basic">Basic</option>
+                            <option selected value="Advance">Advance</option>
+                            <option value="pro">pro</option>
+                        </select>
+                    </div>
+                    <br><br>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="text" ngModel placeholder="Enter password" required name="password"
+                            class="form-control" #password="ngModel">
+                        <small *ngIf="password.invalid&& password.touched" style="color: red;">* password field should not be empty</small>
+                    </div>
+                    <br><br>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <br>
+                        <h3 *ngIf="myform.touched && myform.invalid" style="    color: rgb(100, 2, 63);">Please fill all
+                            fields carefully</h3>
+                    </div>
+                   <div class="row jestify-content-center mt-2">
+                    <div class="col-md-6 rounded shadow py-3">
+                        <h3>User data</h3>
+                        <p>User name:</p>
+                        <p>User name:</p>
+                        <p>User name:</p>
+                        <p>User name:</p>
+                    </div>
+                   </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

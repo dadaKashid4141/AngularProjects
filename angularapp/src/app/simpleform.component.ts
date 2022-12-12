@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Employee } from '../models/employee';
+import { Employee } from './modelss/employee';
+
 
 @Component({
   selector: 'app-simpleform',
