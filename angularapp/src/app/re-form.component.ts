@@ -8,7 +8,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReFormComponent implements OnInit {
 myReactiveForm: FormGroup;
-  constructor() {
+// btndisable=true;
+
+genders=[
+  {id:'1' , value:'Male'},
+  {id:'2' , value:'Female'}
+];
+notAllowedNames=['Codemind' ,'Technology','Codemind Technology'];
+
+  constructor() {  
     this.createForm();
    }
 
@@ -17,13 +25,23 @@ myReactiveForm: FormGroup;
   }
 createForm(){
   this.myReactiveForm= new FormGroup({
-    'username':new FormControl('' , Validators.required),
-    'email':new FormControl('', Validators.required,)
-  })
+    'username':new FormControl('' , [Validators.required,this.NaNames.bind(this)]),
+    'email':new FormControl('',[ Validators.required,Validators.email]),
+    'Course':new FormControl('Angular',[]),
+    'gender':new FormControl('Male',[])
+  }) 
 }
 
 OnSubmit(){
   console.log(this.myReactiveForm);
+  console.log(this.myReactiveForm.get('username').value);
   
+  
+}
+NaNames(control:FormControl){
+  if (this.notAllowedNames.indexOf(control.value)!== -1) {
+          return {'namesNotAllowed':true}   
+  }
+  return false;
 }
 }

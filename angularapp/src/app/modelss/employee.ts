@@ -5,3 +5,11 @@ export class  Employee{
     gender: any;
 
 }
+
+
+export class TempEmp{
+    username: string;
+    email:string;
+    subscription:string;
+    password:string;
+}

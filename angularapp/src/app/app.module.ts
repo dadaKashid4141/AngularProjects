@@ -32,6 +32,6 @@ import { TempletdrivenassiComponent } from './templetdrivenassi/templetdrivenass
     BrowserModule,ReactiveFormsModule,FormsModule
   ],
   providers: [],
-  bootstrap: [TempletdrivenassiComponent]    //default starting components
+  bootstrap: [ReFormComponent]    //default starting components
 })
 export class AppModule { }
