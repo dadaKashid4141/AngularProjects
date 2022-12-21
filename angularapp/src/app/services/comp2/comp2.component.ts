@@ -11,13 +11,17 @@ export class Comp2Component implements OnInit {
   constructor(private _utilities:UtilityService) { 
     this._utilities.userName.subscribe(result=>{
       this.userName=result;
+      console.log(this.userName);
     })
+    
+    
   }
+
 
   ngOnInit() {
   }
-  updateUserName(uname){
-    console.log(uname.value);
-    this._utilities.userName.next(uname.value)
-      }
+  // updateUserName(uname){
+  //   console.log(uname.value);
+  //   this._utilities.userName.next(uname.value)
+  //     }
 }

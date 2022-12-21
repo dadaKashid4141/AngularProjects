@@ -1,7 +1,30 @@
-<div class="box container">
+<!-- <div class="box container">
     User Name: <strong>{{userName}}</strong>
     <br>
     <br>
     <input type="text" name="" placeholder="Update Name" #uname id="">
     <button (click)="updateUserName(uname)">Update</button>
-</div>
+</div> -->
+<!-- name:{{userName.name}}
+price:{{userName.price}} -->
+
+<h2>compo2</h2>
+
+<table class=" table table-bordered  table-dark table-hover">
+    <thead class=" table table-light">
+     <th>
+         Name
+     </th>
+     <th>Price</th>
+     <th>Camera</th>
+     <th>RAM</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of userName">
+            <td>{{a.name}}</td>
+            <td>{{a.price}}</td>
+            <td>{{a.camera}}</td>
+            <td>{{a.RAM}}</td>
+        </tr>
+    </tbody>
+ </table>
