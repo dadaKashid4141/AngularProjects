@@ -5,6 +5,6 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class UtilityService {
-userName=new Subject<any>();
+userName=new BehaviorSubject<any>('Mr.');
   constructor() { }
 }
