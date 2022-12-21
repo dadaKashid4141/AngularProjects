@@ -1,0 +1,122 @@
+<div class="container border mainbg" >
+    <div class=" row justify-content-center border">
+        <div class="col-md-6 text-left rounded py-2 ">
+            <div class="h4 text-center text-dark">Reactive Form Learning</div>
+            <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()" class="bg-dark p-2 text-white shadow-lg">
+                <div formGroupName="userDetails">
+                    <div class="form-group row mb-3">
+
+                        <label class="col-sm-3 pt-1" for="">first Name</label>
+                        <div class="col-sm-8 "> <input type="text" class=" form-control text-uppercase" formControlName="firstname"
+                                placeholder="Enter first Name" >
+                            <small class="text-danger"
+                                *ngIf="myReactiveForm.get('userDetails.firstname').invalid && myReactiveForm.get('userDetails.firstname').touched">
+                                Enter valid name
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-3 pt-1">last Name</label>
+                        <div class="col-sm-8 ">
+                            <input type="text" class=" form-control text-uppercase" formControlName="lastname"
+                                placeholder="Enter last Name">
+                                <small class="text-danger"
+                                *ngIf="myReactiveForm.get('userDetails.lastname').invalid && myReactiveForm.get('userDetails.lastname').touched">
+                                Enter valid lastname
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-3 pt-1">Age </label>
+                    <div class="col-sm-8 ">
+                        <input type="number" class=" form-control" formControlName="ege" placeholder="Enter Ege(17-20)">
+                        <small class="text-danger" *ngIf="myReactiveForm.get('ege').invalid &&myReactiveForm.get('ege').touched">Enter valid Age</small>
+                    </div>
+                </div>
+
+                <div class="form-group  row mb-3">
+                    <label class="col-sm-3 pt-1">Email </label>
+                    <div class="col-sm-8 ">
+                        <input type="email" name="" id="" class=" form-control" formControlName="email"
+                            placeholder="Enter Email Address">
+                            <small class="text-danger"
+                                *ngIf="myReactiveForm.get('email').invalid&&myReactiveForm.get('email').touched">
+                                Enter valid email
+                            </small>
+                    </div>
+                </div> &nbsp;
+
+                <div class="form-group  row mb-3">
+                    <label class="col-sm-3 pt-1">Phone </label>
+                    <div class="col-sm-8 ">
+                        <input type="text" class=" form-control" formControlName="Phone"
+                            placeholder="Enter Phone number" maxlength="10">
+                            <small class="text-danger"
+                            *ngIf="myReactiveForm.get('Phone').invalid&&myReactiveForm.get('Phone').touched">
+                            Enter valid Phone number
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group  row mb-3 h6">
+                    <label class="col-sm-3 pt-1">Select city</label>
+                    <div class="col-sm-8 ">
+                        <select class="form-control" formControlName="city">
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkatta">Kolkatta</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group  row mb-3">
+                    <label class="col-sm-3 pt-1">Gender </label>
+                    <div class="col-sm-8">
+                    <div class="custome-control custom-radio " *ngFor="let genderss of genders">
+                       
+                            <input type="radio" id="{{genderss.id}}" formControlName="gender" value="{{genderss.value}}"
+                                class="custome-control-input">
+                            <label for="{{genderss.id}}" class="custome-control-lable">{{genderss.value}}</label>
+                        
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="form-group row mb-3">
+                    <label class="col-sm-3 pt-1">password </label>
+                    <div class="col-sm-8 ">
+                        <input type="password" class=" form-control" formControlName="password"
+                            placeholder="Enter password">
+                            <small class="text-danger"
+                            *ngIf="myReactiveForm.get('password').invalid && myReactiveForm.get('password').touched">
+                            Enter valid password
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group row mb-3">
+                    <label class="col-sm-3 pt-1">Conform password </label>
+                    <div class="col-sm-9 ">
+                        <input type="password" class=" form-control" formControlName="cpassword"
+                            placeholder="Conform password">
+
+                            <small class="text-danger" *ngIf="myReactiveForm.get('password').value!=myReactiveForm.get('cpassword').value && myReactiveForm.get('cpassword').touched">
+                             Password Missssmatch!!!
+                    </small>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <div >
+                        <button class="btn btn-success form-control" [disabled]="btndisable">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

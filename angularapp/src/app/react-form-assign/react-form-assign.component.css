@@ -1,0 +1,10 @@
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+    box-shadow: 4px 0 15px #d0474721;
+}
+.mainbg{
+    background-image: url("https://png.pngtree.com/background/20210714/original/pngtree-d-illustration-mock-up-scene-geometry-shape-platform-forms-for-product-picture-image_1245889.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+}
