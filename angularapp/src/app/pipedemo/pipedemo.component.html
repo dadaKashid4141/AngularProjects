@@ -1,0 +1,28 @@
+<ul>
+<li>Todays full date:{{todaydate }}</li>
+<li>Todays date:{{todaydate | date:'fullDate'}}</li>
+
+<li>Month ,Todays date:{{todaydate | date}}</li>
+<li>Only time:{{todaydate | date:'shortTime'}}</li>
+<li>Only date:{{todaydate | date:'shortDate'}}</li>
+<li>Week Day:{{todaydate | date:'EEEE'}}</li>
+
+</ul>
+--------------------------------------------------------------------------------------------------------------------<br>
+given number: {{ number}}
+
+<ul>
+    <li>Default:{{number | currency}}</li>
+    <li>Currency in Euro:  {{number | currency:'EUR'}}'</li>
+    <li>Currency in Indian rupee{{number | currency:'INR'}}'</li>
+    <li>Currency in United States dollar{{number | currency:'USD'}}'</li>
+
+
+</ul>
+
+-----------------------------------------------------------------------------------------------------------------<br>
+<h3>String...</h3>
+<h4>Normal:  {{greeting}}</h4>
+<h5>In Uppercase: {{greeting | uppercase}}</h5>
+<h5>In lowercase: {{greeting |  lowercase}}</h5>
+
