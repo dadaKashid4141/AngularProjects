@@ -31,16 +31,22 @@ import { ReactFormAssign2Component } from './react-form-assign2/react-form-assig
 import { Comp1Component } from './services/comp1/comp1.component';
 import { Comp2Component } from './services/comp2/comp2.component';
 import { Comp3Component } from './services/comp3/comp3.component';
-import { Comp4Component } from './services/comp4/comp4.component';  //use for reading or fetching data form webserver. 
+import { Comp4Component } from './services/comp4/comp4.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';  //use for reading or fetching data form webserver. 
+import { FilpterpipeComponent } from './pipes/filpterpipe.component';
+import { CountPipe } from './pipes/count.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { PipeassigComponent } from './pipes/pipeassig/pipeassig.component';
+import { CheckgenderPipe } from './pipes/checkgender.pipe';
 
 @NgModule({
   declarations: [   //U can add all component here
-    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component,
+    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe
   ],
   imports: [            //All moduls 
     BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule
   ],
   providers: [],
-  bootstrap: [Comp1Component, Comp2Component, Comp3Component, Comp4Component,]    //default starting components
+  bootstrap: [PipeassigComponent]    //default starting components
 })
 export class AppModule { }

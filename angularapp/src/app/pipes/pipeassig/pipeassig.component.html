@@ -1,0 +1,28 @@
+<div class="row justify-content-center bg" >
+    <div class="col-md-8 form-inline mb-2">
+        
+        
+    </div>
+    <div class="col-md-8">
+        <table class="table p-3 mb-2 bg-transparent text-dark bg table-bordered text-center" >
+             <thead>
+                <tr>
+                   
+                    <th scope="col">id</th>
+                    <th scope="col">name</th>
+                    <th scope="col">gender</th>
+                    <th scope="col">bday</th>
+                </tr>
+             </thead>   
+             <tbody>
+                <tr *ngFor="let emp of empArray ">
+                   
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.name | checkgender:emp.gender}}</td>
+                    <td>{{emp.gender}}</td>
+                    <td>{{emp.bday}}</td>
+                </tr>
+             </tbody>
+        </table>
+    </div>
+</div>

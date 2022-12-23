@@ -79,7 +79,8 @@ NaNames(control:FormControl){
           return {'namesNotAllowed':true}   
   }
   return false;
-
+ 
+  
 
   
 }

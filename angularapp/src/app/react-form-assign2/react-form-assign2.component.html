@@ -5,21 +5,33 @@
             <div class="h4 text-center text-dark">Reactive Form Learning
 
                 <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()" class="bg-dark p-2 text-white shadow-lg">
-                    
-                        <div class="form-group row mb-3">
 
-                            <label class="col-sm-3 pt-1" for="">Project Name</label>
-                            <div class="col-sm-8 "> <input type="text" class=" form-control text-uppercase"
-                                    formControlName="projectname" placeholder="Enter project Name">
+                    <div class="form-group row mb-3">
 
-                            </div>
-                        
+                        <label class="col-sm-3 pt-1" for="">Project Name</label>
+                        <div class="col-sm-8 ">
+                            <input type="text" class=" form-control " formControlName="projectname"
+                                placeholder="Enter project Name">
+                                <small class=" text-danger"
+                                *ngIf="myReactiveForm.get('projectname').invalid && myReactiveForm.get('projectname').touched"> &nbsp; &nbsp;
+                                <small class="text-danger"
+                                    *ngIf="myReactiveForm.get('projectname').errors['required']">Please
+                                    Enter Valid Project Name</small>
+                                <small class="text-danger"
+                                    *ngIf="myReactiveForm.get('projectname').errors['namesNotAllowed']">test Not allowed </small>
+                            </small>
+                        </div>
+
                         <div class="form-group  row mb-3">
                             <label class="col-sm-3 pt-1">Email </label>
                             <div class="col-sm-8 ">
-                                <input type="email" name="email" id="" class=" form-control" formControlName="email"
-                                    placeholder="Enter Email Address">
+                                <input type="email" email name="email" id="" class=" form-control"
+                                    formControlName="email" placeholder="Enter Email Address">
                             </div>
+                            <small class=" text-danger"
+                                *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">Please
+                                Enter
+                                Valid Email</small>
                         </div>
                         <div class="form-group  row mb-3 h6">
                             <label class="col-sm-3 pt-1">Project Status</label>
@@ -33,7 +45,7 @@
                         </div>
 
                         <div class="form-group row mb-3">
-                            <div >
+                            <div>
                                 <button class="btn btn-success form-control" [disabled]="btndisable">Register</button>
                             </div>
                         </div>
