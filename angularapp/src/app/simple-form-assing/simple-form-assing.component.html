@@ -1,91 +1,94 @@
 <div class="container">
-    
-        <div id="bgc">
-            <div style="text-align: center;"><h4 class="tita"><i>Template Driven Form</i></h4></div>
-            <div class="container col-md-6">
-                <form  (ngSubmit)="OnSubmit(myform)" #myform="ngForm" jestify-content-center>
-                    <div class="form-group" style="align-items: center;">
-                        <label for="First Name">First Name:</label>
-                        <input ngModel type="text" placeholder="Enter First Name (Only Uppercase)" required
-                            minlength="5" maxlength="5" pattern="[A-Z]+$" #fname="ngModel" name="fname"
-                            class="form-control">
 
-                        <p *ngIf="fname.touched && fname.invalid" style="color: red;">* Enter valid First Name</p>
-
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="Last Name">Last Name:</label>
-                        <input ngModel type="text" placeholder="Enter Last Name  (Only Uppercase)" maxlength="10"
-                            pattern="[A-Z]+$" name="lname" #lname="ngModel" class="form-control" required>
-
-                        <small *ngIf="lname.touched && lname.invalid" style="color: red ">Enter valid Name(i.e. in Uppercase)</small>
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="Age">Age:</label>
-                        <input type="number" name="age" class="form-control" required min="17" max="20" #age="ngModel" 
-                            placeholder="Enter Age (17-20)" ngModel>
-                        <small *ngIf="((age.value!=18&&age.value!=19&&age.value!=20&&age.value!=20))&& age.touched " style="color: red ">* Enter valid Age</small>
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="email">Email:</label>
-                        <input #email="ngModel" ngModel class="form-control" type="email" placeholder="Enter your Email"
-                            required email name="email">
-
-                        <small *ngIf="email.touched && email.invalid" style="color: red ">* Enter valid Email</small>
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="Phone">Phone:</label>
-                        <input #phone="ngModel" ngModel class="form-control" type="text"
-                            placeholder="Enter your Phone No:" maxlength="10" minlength="10" required name="phone"
-                            pattern="[0-9]+$">
-
-                        <small *ngIf="phone.touched && phone.invalid" style="color: red ">* Enter valid Phone
-                            No.</small>
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="City">City:</label>
-                        <select name="City" #city="ngModel" ngModel class="form-control">
-                            <option value="Mumbai">Mumbai</option>
-                            <option value="Kolkatta">Kolkatta</option>
-                            <option value="Delhi">Delhi</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="gender">Gender: </label>
-                        <input type="radio" value="Male" name="gender">Male
-
-                        <input type="radio" value="Female" name="gender">Female
-
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="password">Password:</label>
-                        <input name="password" #password="ngModel" ngModel class="form-control" type="password"
-                            placeholder="Enter Password" required>
-
-                        <small *ngIf="password.touched && password.invalid" style="color: red ">* Enter valid
-                            password</small>
-                    </div>
-
-                    <div class="form-group mt-2">
-                        <label for="Confpw">Conform Password:</label>
-                        <input #Confpw="ngModel" ngModel class="form-control" type="password"
-                            placeholder="Conform Password" name="Confpw" required>
-
-                        <small *ngIf="password.value!=Confpw.value && Confpw.touched " style="color: red ">*  password mismatch</small>
-                    </div>
-
-                    <div class="form-group mt-2 ">
-                        <button type="submit" class="btn btn-primary" >Register</button>
-                    </div>
-                </form>
-            </div>
+    <div id="bgc">
+        <div style="text-align: center;">
+            <h4 class="tita"><i>Template Driven Form</i></h4>
         </div>
-    
+        <div class="container col-md-6">
+            <form (ngSubmit)="OnSubmit(myform)" #myform="ngForm" jestify-content-center>
+                <div class="form-group" style="align-items: center;">
+                    <label for="First Name">First Name:</label>
+                    <input ngModel type="text" placeholder="Enter Your First Name (Only Uppercase)" required
+                        minlength="5" maxlength="5" pattern='[A-Z]' #fname="ngModel" name="fname" class="form-control">
+
+                    <p *ngIf="fname.touched && fname.invalid" style="color: red;">* Enter valid First Name</p>
+
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="Last Name">Last Name:</label>
+                    <input ngModel type="text" placeholder="Enter Last Name  (Only Uppercase)" maxlength="10"
+                        pattern="[A-Z]+$" name="lname" #lname="ngModel" class="form-control" required>
+
+                    <small *ngIf="lname.touched && lname.invalid" style="color: red ">Enter valid Name(i.e. in
+                        Uppercase)</small>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="Age">Age:</label>
+                    <input type="number" name="age" class="form-control" required min="17" max="20" #age="ngModel"
+                        placeholder="Enter Age (17-20)" ngModel>
+                    <small *ngIf="((age.value!=18&&age.value!=19&&age.value!=20&&age.value!=20))&& age.touched "
+                        style="color: red ">* Enter valid Age</small>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="email">Email:</label>
+                    <input #email="ngModel" ngModel class="form-control" type="email" placeholder="Enter your Email"
+                        required email name="email">
+
+                    <small *ngIf="email.touched && email.invalid" style="color: red ">* Enter valid Email</small>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="Phone">Phone:</label>
+                    <input #phone="ngModel" ngModel class="form-control" type="text" placeholder="Enter your Phone No:"
+                        maxlength="10" minlength="10" required name="phone" pattern="[0-9]">
+
+                    <small *ngIf="phone.touched && phone.invalid" style="color: red ">* Enter valid Phone
+                        No.</small>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="City">City:</label>
+                    <select name="City" #city="ngModel" ngModel class="form-control">
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkatta">Kolkatta</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="gender">Gender: </label>
+                    <input type="radio" value="Male" name="gender">Male
+
+                    <input type="radio" value="Female" name="gender">Female
+
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="password">Password:</label>
+                    <input name="password" #password="ngModel" ngModel class="form-control" type="password"
+                        placeholder="Enter Password" required>
+
+                    <small *ngIf="password.touched && password.invalid" style="color: red ">* Enter valid
+                        password</small>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="Confpw">Conform Password:</label>
+                    <input #Confpw="ngModel" ngModel class="form-control" type="password" placeholder="Conform Password"
+                        name="Confpw" required>
+
+                    <small *ngIf="password.value!=Confpw.value && Confpw.touched " style="color: red ">* password
+                        mismatch</small>
+                </div>
+
+                <div class="form-group mt-2 ">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </div>

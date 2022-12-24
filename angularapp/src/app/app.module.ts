@@ -38,15 +38,20 @@ import { CountPipe } from './pipes/count.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { PipeassigComponent } from './pipes/pipeassig/pipeassig.component';
 import { CheckgenderPipe } from './pipes/checkgender.pipe';
+import { AboutusComponent } from './learnRouting/aboutus/aboutus.component';
+import { ContactusComponent } from './learnRouting/contactus/contactus.component';
+import { ProductComponent } from './learnRouting/product/product.component';
+import { LoginComponent } from './learnRouting/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [   //U can add all component here
-    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe
+    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe, AboutusComponent, ContactusComponent, ProductComponent, LoginComponent
   ],
   imports: [            //All moduls 
-    BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule
+    BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule,AppRoutingModule
   ],
   providers: [],
-  bootstrap: [PipeassigComponent]    //default starting components
+  bootstrap: [AppComponent]    //default starting components
 })
 export class AppModule { }
