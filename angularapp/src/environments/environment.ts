@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false
+
+  
 };
+export const devapiurl='https://jsonplaceholder.typicode.com/';
 
 /*
  * For easier debugging in development mode, you can import the following file

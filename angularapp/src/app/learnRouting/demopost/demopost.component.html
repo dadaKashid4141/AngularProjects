@@ -1,0 +1,22 @@
+<div class="container m-5 p-5 ">
+    <table class="table table-bordered border-5 border-dark table-active bg">
+        <thead class="text-warning text-center">
+           <tr>
+            <th>UserID</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of arrpostdata" class=" text-center">
+                <td>{{post.userId}}</td>
+               
+                    <td><a [routerLink]="['/postdetails',post.id]" style="text-decoration: none; color: black;">{{post.id}}</a></td>
+               
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

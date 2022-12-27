@@ -48,10 +48,12 @@ import { TabletComponent } from './learnRouting/product/tablet/tablet.component'
 import { TvComponent } from './learnRouting/product/tv/tv.component';
 import { WashigMachineComponent } from './learnRouting/product/washig-machine/washig-machine.component';
 import { Error404Component } from './learnRouting/product/error404/error404.component';
+import { DemopostComponent } from './learnRouting/demopost/demopost.component';
+import { PostdetailsComponent } from './learnRouting/postdetails/postdetails.component';
 
 @NgModule({
   declarations: [   //U can add all component here
-    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe, AboutusComponent, ContactusComponent, ProductComponent, LoginComponent, LaptopComponent, TabletComponent, TvComponent,WashigMachineComponent, Error404Component
+    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe, AboutusComponent, ContactusComponent, ProductComponent, LoginComponent, LaptopComponent, TabletComponent, TvComponent,WashigMachineComponent, Error404Component, DemopostComponent, PostdetailsComponent
   ],
   imports: [            //All moduls 
     BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule,AppRoutingModule

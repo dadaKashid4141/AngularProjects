@@ -2,7 +2,9 @@ import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './learnRouting/aboutus/aboutus.component';
 import { ContactusComponent } from './learnRouting/contactus/contactus.component';
+import { DemopostComponent } from './learnRouting/demopost/demopost.component';
 import { LoginComponent } from './learnRouting/login/login.component';
+import { PostdetailsComponent } from './learnRouting/postdetails/postdetails.component';
 import { Error404Component } from './learnRouting/product/error404/error404.component';
 import { LaptopComponent } from './learnRouting/product/laptop/laptop.component';
 import { ProductComponent } from './learnRouting/product/product.component';
@@ -29,6 +31,8 @@ const routes: Routes = [
     {path:'', redirectTo:'login',pathMatch:'full'},
     {path:'react-form-assign',component:ReactFormAssignComponent},
     {path:'simple-form-asssign',component:SimpleFormAssingComponent},
+    {path:'demopost',component:DemopostComponent},
+    {path:'postdetails/:id',component:PostdetailsComponent},
     {path:'**',component:Error404Component}
 ];
 
