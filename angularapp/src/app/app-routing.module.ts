@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './learnRouting/aboutus/aboutus.component';
 import { ContactusComponent } from './learnRouting/contactus/contactus.component';
 import { DemopostComponent } from './learnRouting/demopost/demopost.component';
+import { ElectronicModule } from './learnRouting/electronics/electronic.module';
 import { LoginComponent } from './learnRouting/login/login.component';
 import { PostdetailsComponent } from './learnRouting/postdetails/postdetails.component';
 import { Error404Component } from './learnRouting/product/error404/error404.component';
 import { LaptopComponent } from './learnRouting/product/laptop/laptop.component';
 import { ProductComponent } from './learnRouting/product/product.component';
+import { ProductsModule } from './learnRouting/product/products.module';
 import { TabletComponent } from './learnRouting/product/tablet/tablet.component';
 import { TvComponent } from './learnRouting/product/tv/tv.component';
 
@@ -18,14 +20,14 @@ import { SimpleFormAssingComponent } from './simple-form-assing/simple-form-assi
 
 
 const routes: Routes = [
-    { path:'aboutus',  component:AboutusComponent},             //path =component selector,componenr:class of compo  
+    { path:'aboutus',  component:AboutusComponent},             //path =component /selector name,component:class of compo  
     { path:'contactus',component:ContactusComponent},
-    {path:'product',component:ProductComponent,
-    children:[{path:'laptop',component: LaptopComponent},
-    {path:'tablet',component:TabletComponent},
-    {path:'tv',component:TvComponent},
-    {path:'washing-machine',component:WashigMachineComponent}
-  ]},
+  //   {path:'product',component:ProductComponent,
+  //   children:[{path:'laptop',component: LaptopComponent},
+  //   {path:'tablet',component:TabletComponent},
+  //   {path:'tv',component:TvComponent},
+  //   {path:'washing-machine',component:WashigMachineComponent}
+  // ]},
     {path:'login', component: LoginComponent},
     // {path:'login',component:LoginComponent}, 
     {path:'', redirectTo:'login',pathMatch:'full'},
@@ -37,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),ProductsModule,ElectronicModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

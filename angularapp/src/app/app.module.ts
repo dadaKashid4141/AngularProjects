@@ -40,23 +40,31 @@ import { PipeassigComponent } from './pipes/pipeassig/pipeassig.component';
 import { CheckgenderPipe } from './pipes/checkgender.pipe';
 import { AboutusComponent } from './learnRouting/aboutus/aboutus.component';
 import { ContactusComponent } from './learnRouting/contactus/contactus.component';
-import { ProductComponent } from './learnRouting/product/product.component';
+// import { ProductComponent } from './learnRouting/product/product.component';
 import { LoginComponent } from './learnRouting/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LaptopComponent } from './learnRouting/product/laptop/laptop.component';
-import { TabletComponent } from './learnRouting/product/tablet/tablet.component';
-import { TvComponent } from './learnRouting/product/tv/tv.component';
-import { WashigMachineComponent } from './learnRouting/product/washig-machine/washig-machine.component';
+// import { LaptopComponent } from './learnRouting/product/laptop/laptop.component';
+// import { TabletComponent } from './learnRouting/product/tablet/tablet.component';
+// import { TvComponent } from './learnRouting/product/tv/tv.component';
+// import { WashigMachineComponent } from './learnRouting/product/washig-machine/washig-machine.component';
 import { Error404Component } from './learnRouting/product/error404/error404.component';
 import { DemopostComponent } from './learnRouting/demopost/demopost.component';
 import { PostdetailsComponent } from './learnRouting/postdetails/postdetails.component';
+import { ElectronicModule } from './learnRouting/electronics/electronic.module';
+// import { ProductsModule } from './learnRouting/product/products.module';
+// import { CameraComponent } from './learnRouting/electronics/camera/camera.component';
+// import { ElectronicsComponent } from './learnRouting/electronics/electronics.component';
+// import { WatchesComponent } from './learnRouting/electronics/watches/watches.component';
 
 @NgModule({
   declarations: [   //U can add all component here
-    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe, AboutusComponent, ContactusComponent, ProductComponent, LoginComponent, LaptopComponent, TabletComponent, TvComponent,WashigMachineComponent, Error404Component, DemopostComponent, PostdetailsComponent
+    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe, AboutusComponent, ContactusComponent, LoginComponent,
+    //  LaptopComponent, TabletComponent, TvComponent,WashigMachineComponent,   //splite in to new module i.e product model
+      Error404Component, DemopostComponent, PostdetailsComponent,
+      // CameraComponent, ElectronicsComponent, WatchesComponent
   ],
   imports: [            //All moduls 
-    BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule,AppRoutingModule
+    BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule,ElectronicModule,AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]    //default starting components

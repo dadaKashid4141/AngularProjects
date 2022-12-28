@@ -8,9 +8,9 @@ import { devapiurl } from 'src/environments/environment';
 })
 export class PostService {
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http:HttpClient) { }        // s1-HttpClient -use when data from server site(jsonplaceholder)
   getpostdata():Observable<any>{
-   return this._http.get(`${devapiurl}posts`);
+   return this._http.get(`${devapiurl}posts`);      //st2- get data from url used in environment
 }
 
 getByPostId(id):Observable<any>{
