@@ -26,7 +26,7 @@ import { SimpleFormAssingComponent } from './simple-form-assing/simple-form-assi
 import { ReactFormAssignComponent } from './react-form-assign/react-form-assign.component';
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
-import{HttpClientModule}from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactFormAssign2Component } from './react-form-assign2/react-form-assign2.component';
 import { Comp1Component } from './services/comp1/comp1.component';
 import { Comp2Component } from './services/comp2/comp2.component';
@@ -51,22 +51,65 @@ import { Error404Component } from './learnRouting/product/error404/error404.comp
 import { DemopostComponent } from './learnRouting/demopost/demopost.component';
 import { PostdetailsComponent } from './learnRouting/postdetails/postdetails.component';
 import { ElectronicModule } from './learnRouting/electronics/electronic.module';
+import { EagerModule } from './learnRouting/eager/eager.module';
 // import { ProductsModule } from './learnRouting/product/products.module';
 // import { CameraComponent } from './learnRouting/electronics/camera/camera.component';
 // import { ElectronicsComponent } from './learnRouting/electronics/electronics.component';
 // import { WatchesComponent } from './learnRouting/electronics/watches/watches.component';
 
 @NgModule({
-  declarations: [   //U can add all component here
-    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent, CustdirDirective, ParentComponent, ChildeComponent, ParentOneComponent, ChildOneComponent, HooksComponent, AssigndirectiveComponent, ParenthookComponent, AddremovebuttonComponent, TemplateformComponent, SimpleformComponent,ReFormComponent, TempletdrivenassiComponent, SimpleFormAssingComponent, ReactFormAssignComponent, Servicecomp1Component, Servicecomp2Component, ReactFormAssign2Component, Comp1Component, Comp2Component, Comp3Component, Comp4Component, PipedemoComponent,FilpterpipeComponent, CountPipe, FilterPipe, PipeassigComponent, CheckgenderPipe, AboutusComponent, ContactusComponent, LoginComponent,
-    //  LaptopComponent, TabletComponent, TvComponent,WashigMachineComponent,   //splite in to new module i.e product model
-      Error404Component, DemopostComponent, PostdetailsComponent,
-      // CameraComponent, ElectronicsComponent, WatchesComponent
+  declarations: [   //U can add all component,custom directive,pipe here
+    AppComponent, OneComponent, SecondComponent, AssignComponent, DemodirectiveComponent, AssignStructDirectiveComponent, AttriComponent,
+    // CustdirDirective,
+    ParentComponent,
+    ChildeComponent,
+    ParentOneComponent,
+    ChildOneComponent,
+    HooksComponent,
+    AssigndirectiveComponent,
+    ParenthookComponent,
+    AddremovebuttonComponent,
+    TemplateformComponent,
+    SimpleformComponent,
+    ReFormComponent,
+    TempletdrivenassiComponent,
+    SimpleFormAssingComponent,
+    ReactFormAssignComponent,
+    Servicecomp1Component,
+    Servicecomp2Component,
+    ReactFormAssign2Component,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component, Comp4Component,
+    PipedemoComponent,
+    FilpterpipeComponent,
+    CountPipe,
+    FilterPipe,
+    PipeassigComponent,
+    CheckgenderPipe,
+    AboutusComponent,
+    ContactusComponent,
+    LoginComponent,
+    //  LaptopComponent,
+    //  TabletComponent, 
+    //  TvComponent,
+    //  WashigMachineComponent,   //splite in to new module i.e product model
+    Error404Component,
+    DemopostComponent,
+    PostdetailsComponent,
+    // CameraComponent,
+    //  ElectronicsComponent, 
+    //  WatchesComponent
   ],
   imports: [            //All moduls 
-    BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule,ElectronicModule,AppRoutingModule,
+    BrowserModule, ReactiveFormsModule, FormsModule, HttpClientModule,EagerModule, AppRoutingModule,
   ],
-  providers: [],
+  providers: [],   //All services
   bootstrap: [AppComponent]    //default starting components
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    console.log('app.module loaded');
+
+  }
+}

@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './learnRouting/aboutus/aboutus.component';
 import { ContactusComponent } from './learnRouting/contactus/contactus.component';
 import { DemopostComponent } from './learnRouting/demopost/demopost.component';
@@ -25,7 +25,7 @@ const routes: Routes = [
   //   {path:'product',component:ProductComponent,
   //   children:[{path:'laptop',component: LaptopComponent},
   //   {path:'tablet',component:TabletComponent},
-  //   {path:'tv',component:TvComponent},
+  //   {path:'tv',component:TvComponent},                                                  //product feature module created 
   //   {path:'washing-machine',component:WashigMachineComponent}
   // ]},
     {path:'login', component: LoginComponent},
@@ -35,11 +35,22 @@ const routes: Routes = [
     {path:'simple-form-asssign',component:SimpleFormAssingComponent},
     {path:'demopost',component:DemopostComponent},
     {path:'postdetails/:id',component:PostdetailsComponent},
-    {path:'**',component:Error404Component}
+    {path:'electronics',loadChildren:'./learnRouting/electronics/electronic.module#ElectronicModule'},//lazzy loading
+    {path:'product',loadChildren:'./learnRouting/product/products.module#ProductsModule'},//lazzy loading
+    {path:'order',loadChildren:'./learnRouting/order/order.module#OrderModule'} ,    //lazzy
+    {path:'**',component:Error404Component}  //wild card rauting(404)
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),ProductsModule,ElectronicModule],
+  imports: [RouterModule.forRoot(routes,
+    {preloadingStrategy:PreloadAllModules}   //pre loading
+    )],
+
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  constructor(){
+    console.log('app.routing.module loadede');
+    
+  }
+}

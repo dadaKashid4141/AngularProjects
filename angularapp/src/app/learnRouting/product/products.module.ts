@@ -7,8 +7,8 @@ import { TvComponent } from './tv/tv.component';
 import { WashigMachineComponent } from './washig-machine/washig-machine.component';
 import { RouterModule, Routes } from '@angular/router';
 
-const route:Routes= [{path:'product',component:ProductComponent,
-children:[{path:'laptop',component: LaptopComponent},
+const route:Routes= [{path:'',component:ProductComponent,
+children:[{path:'laptop',component: LaptopComponent},         
 {path:'tablet',component:TabletComponent},
 {path:'tv',component:TvComponent},
 {path:'washing-machine',component:WashigMachineComponent}
@@ -31,4 +31,9 @@ children:[{path:'laptop',component: LaptopComponent},
   exports:[RouterModule]
   
 })
-export class ProductsModule { }
+export class ProductsModule {                         //products splited from app.module 
+  constructor(){
+    console.log('product module loaded');
+    
+  }
+ }

@@ -4,8 +4,9 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { ElectronicsComponent } from './electronics.component';
 import { CameraComponent } from './camera/camera.component';
 import { WatchesComponent } from './watches/watches.component';
+import { UtilityModule } from 'src/app/modelss/utility.module';
 
-const rroute:Routes=[{path:'electronics',component:ElectronicsComponent,
+const rroute:Routes=[{path:'',component:ElectronicsComponent,
 children:[{path:'camera',component:CameraComponent},
 {path:'watches',component:WatchesComponent}]}]
 
@@ -17,8 +18,14 @@ children:[{path:'camera',component:CameraComponent},
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(rroute)
+    RouterModule.forChild(rroute),
+    UtilityModule                    //shared module used for watches
   ],
   exports:[RouterModule]
 })
-export class ElectronicModule { }
+export class ElectronicModule {
+  constructor(){
+    console.log('Electronic.MOdule loaded ');
+    
+  }
+ }
