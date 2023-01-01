@@ -1,0 +1,20 @@
+<p>celebrity works!</p>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th class="bgc" scope="col">no</th>
+            <th class="bgc" scope="col">Points</th>
+            <th class="bgc" scope="col">Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cd of arrceleb; index as i">
+            <td>{{i+1}}.</td>
+            <td class="hov">{{cd.name}}</td>
+            <td class="incFont">{{cd.value}}</td>
+
+        </tr>
+
+    </tbody>
+</table>

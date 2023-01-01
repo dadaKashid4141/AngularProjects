@@ -1,0 +1,11 @@
+<div class="container m-5 p-5">
+    <div class="form-group">
+        <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+            <label for="Enter user name">Enter user name</label>
+            <input type="text" class="form-control"  formControlName="username">
+
+            <input type="submit" value="Add user" class="btn btn-primary form-control">
+
+        </form>
+    </div>
+</div>

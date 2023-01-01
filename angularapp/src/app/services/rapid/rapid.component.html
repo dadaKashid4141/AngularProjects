@@ -1,0 +1,44 @@
+<div class="row " >
+    <div  *ngFor="let obj of arrData" class="  col   flex-wrap justify-content-center" >
+<div class="card m-4 bgc" style="width: 15rem;height: 25rem; " >
+
+    <img class="card-img-top " style="height:30%;" src="{{obj.thumbnailImage}}"  alt="--------Article-------">
+    <div class="card-body " >
+      <h5 class="card-title " id="hover">Title:{{obj.title}}</h5>
+      <p class="card-text">Date:{{obj.date}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item obg">Id:{{obj.id}}</li>
+      <li class="list-group-item obg">Card Type:{{obj.card}}</li>
+      <li class="list-group-item"></li>
+    </ul>
+    <div class=" bg-dark" id="link">
+    <a href={{obj.longURL}}>Long url</a>
+  </div>
+    </div>
+    
+    </div>
+</div>
+  
+
+  <!-- <table>
+    <thead>
+        <tr>
+            <th>card</th>
+            <th>date</th>
+            <th>id</th>
+            <th>url</th>
+            <th>title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of arrData">
+            <td>{{obj.card}}</td>
+            <td>obj.date</td>
+            <td>obj.id</td>
+            <td>obj.longUrl</td>
+            <td>obj.title</td>
+        </tr>
+    </tbody>
+  </table>
+   -->

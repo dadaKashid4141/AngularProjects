@@ -66,6 +66,10 @@
         <li class="nav-item">
           <a class="nav-link " routerLinkActive="active" routerLink="login/">Login</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link " routerLinkActive="active" routerLink="adduser/">Add User</a>
+        </li>
         <li>
           <a class="nav-link " routerLinkActive="active" routerLink="/react-form-assign">React Form</a>
         </li>
@@ -92,6 +96,16 @@
         <li class="nav-item">
           <a class="nav-link " routerLinkActive="active" routerLink="/demopost"> post</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLinkActive="active" routerLink="/rapid">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLinkActive="active" routerLink="/youtube">Youtube API</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLinkActive="active" routerLink="/celebrity">celebrity API</a>
+        </li>
+
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -99,11 +113,15 @@
             Dropdown link
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" routerLink="/product">product</a>
+            <a class="dropdown-item" routerLink="/electronics">Electronics</a>
+            <a class="dropdown-item" routerLink="/aboutus">About</a>
           </div>
         </li>
       </ul>
 
+
+
 <router-outlet></router-outlet>
+<!-- <app-rapid></app-rapid> -->
+<!-- <app-youtube></app-youtube> -->

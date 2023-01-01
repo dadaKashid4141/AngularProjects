@@ -1,0 +1,24 @@
+.bgc {
+    background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
+
+
+}
+
+.obg {
+    background: #8abddd;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f68c9c, #009FFF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ec909e, #8fcdf6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+#hover:hover {
+    /* border: 2px solid rgb(6, 6, 5); */
+    /* font-weight:100; */
+    font-size: 200%;
+}
+
+#link:hover {}

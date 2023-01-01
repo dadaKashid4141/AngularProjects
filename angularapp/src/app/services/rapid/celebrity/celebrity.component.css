@@ -1,0 +1,12 @@
+.hov:hover{
+color: rgb(186, 250, 56);
+
+}
+.incFont:hover{
+    font-size: 25px;
+    font-style: italic;
+}
+.bgc{
+   font-style: oblique;
+   font-size: larger;
+}

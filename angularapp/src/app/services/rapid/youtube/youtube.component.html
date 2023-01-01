@@ -1,0 +1,21 @@
+<p>youtube works!</p>
+<div class="container m-5 p-5 ">
+    <table class="table table-bordered border-light table-active bgc">
+        <thead class=" text-white table text-center">
+            <tr>
+              <th>card</th>
+            <th>date</th>
+            <th>id</th>
+           
+            </tr>
+        </thead>
+        <tbody class="table-group-divider text-white">
+            <tr *ngFor="let dt of gettingdata">
+                <td>{{dt.id}}</td>
+                <td>{{dt.name}}</td>
+                <td>{{dt.title}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

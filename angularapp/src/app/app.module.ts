@@ -52,6 +52,10 @@ import { DemopostComponent } from './learnRouting/demopost/demopost.component';
 import { PostdetailsComponent } from './learnRouting/postdetails/postdetails.component';
 import { ElectronicModule } from './learnRouting/electronics/electronic.module';
 import { EagerModule } from './learnRouting/eager/eager.module';
+import { AdduserComponent } from './authGuard/adduser/adduser.component';
+import { RapidComponent } from './services/rapid/rapid.component';
+import { YoutubeComponent } from './services/rapid/youtube/youtube.component';
+import { CelebrityComponent } from './services/rapid/celebrity/celebrity.component';
 // import { ProductsModule } from './learnRouting/product/products.module';
 // import { CameraComponent } from './learnRouting/electronics/camera/camera.component';
 // import { ElectronicsComponent } from './learnRouting/electronics/electronics.component';
@@ -97,6 +101,10 @@ import { EagerModule } from './learnRouting/eager/eager.module';
     Error404Component,
     DemopostComponent,
     PostdetailsComponent,
+    AdduserComponent,
+    RapidComponent,
+    YoutubeComponent,
+    CelebrityComponent,
     // CameraComponent,
     //  ElectronicsComponent, 
     //  WatchesComponent
