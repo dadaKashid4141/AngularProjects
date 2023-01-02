@@ -19,7 +19,7 @@ export class RapidApiService {
     return this.httpclient.get(this.url, { headers: header });
   }
 
-
+//---------------------------------------------------------------------------------------------------------------------------
 
   getdataceleb(): Observable<any> {
 

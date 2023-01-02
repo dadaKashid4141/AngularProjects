@@ -8,10 +8,10 @@ import { RapidApiService } from '../../rapid-api.service';
 })
 export class CelebrityComponent implements OnInit {
 arrceleb:any[]=[];                                      //array for store api data
-  constructor(private bio:RapidApiService) { }      //DI 
+  constructor(private bio:RapidApiService) { }              //service injected for celeb api 
 
   ngOnInit() {
-    this.bio.getdataceleb().subscribe(result=>{       
+    this.bio.getdataceleb().subscribe(result=>{         
       console.log('celebrity Data:-',result);
       this.arrceleb=result.moreFacts;
       console.log("arrceleb:",this.arrceleb);

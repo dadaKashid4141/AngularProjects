@@ -9,7 +9,7 @@
                 <div class="form-group" style="align-items: center;">
                     <label for="First Name">First Name:</label>
                     <input ngModel type="text" placeholder="Enter Your First Name (Only Uppercase)" required
-                        minlength="5" maxlength="5" pattern='[A-Z]' #fname="ngModel" name="fname" class="form-control">
+                        minlength="5" maxlength="5"  #fname="ngModel" name="fname" class="form-control">
 
                     <p *ngIf="fname.touched && fname.invalid" style="color: red;">* Enter valid First Name</p>
 
@@ -43,7 +43,7 @@
                 <div class="form-group mt-2">
                     <label for="Phone">Phone:</label>
                     <input #phone="ngModel" ngModel class="form-control" type="text" placeholder="Enter your Phone No:"
-                        maxlength="10" minlength="10" required name="phone" pattern="[0-9]">
+                        maxlength="10" minlength="10" required name="phone" pattern="[0-9]+$">
 
                     <small *ngIf="phone.touched && phone.invalid" style="color: red ">* Enter valid Phone
                         No.</small>
